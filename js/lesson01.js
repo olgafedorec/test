@@ -28,28 +28,29 @@
 
 // !-----------------------------task03-----------------------------//
 
-const null = 1;
+const num = prompt("Введіть число від 1 до 4");
 
 let result = "";
 
-switch (null) {
-    case 1:
+switch (num) {
+    case "1":
         result = "Зима";
         break;
 
-    case 2:
+    case "2":
         result = "Весна";
         break;
-    case 3:
+    
+        case "3":
         result = "Літо";
         break;
-    case 4:
+    
+        case "4":
         result = "Осінь";
         break;
     
-
     default:
-        result = "Введіть число від 1 до 4";
+    result = "Введіть число від 1 до 4";
 }
 
 console.log(result);
