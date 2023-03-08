@@ -18,9 +18,13 @@
 
 const time = prompt("Введіть число");
 
-const hours = Number(time) / 60;
+const hours = Math.floor(Number(time) / 60);
+const updateHours = String(hours).padStart(2, "0");
 
-console.log(hours);
+const minutes = time % 60;
+const updateMinutes = String(minutes).padStart(2, "0");
+
+console.log(`${updateHours}:${updateMinutes}`);
 
 
 
