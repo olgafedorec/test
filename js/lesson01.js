@@ -72,18 +72,29 @@
 //числа від max до min по зменшеню.
 //Виведіть в консоль суму усіх парних чисел.
 
-const min = 0;
-const max = 10;
+// const min = 0;
+// const max = 10;
 
-let total = 0;
+// let total = 0;
 
-for (let i = max; i >= min; i -= 1) {
-    console.log(i);
+// for (let i = max; i >= min; i -= 1) {
+//     console.log(i);
 
-    if (i % 2 === 0) {
-    total += i;
+//     if (i % 2 === 0) {
+//     total += i;
 
-    }
-}
+//     }
+// }
 
-console.log(total);
+// console.log(total);
+
+// !---------------------------------task05--------------------------------//
+
+function calculateEngravingPrice(message, pricePerWord) {
+    // Change code below this line
+   
+ let price = message.length * pricePerWord;
+ 
+ return price;
+    // Change code above this line
+ }
