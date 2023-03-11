@@ -90,11 +90,9 @@
 
 // !---------------------------------task05--------------------------------//
 
-function calculateEngravingPrice(message, pricePerWord) {
-    // Change code below this line
-   
- let price = message.length * pricePerWord;
+function makeArray(firstArray, secondArray, maxLength) {
+   // Change code below this line
+const newArray = firstArray.concat(secondArray);
+     newArray.slice(0, maxLength);
  
- return price;
-    // Change code above this line
- }
+return newArray;
