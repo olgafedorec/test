@@ -8,10 +8,10 @@
 //в противному випадку відобразити: "Не знаєте? ECMAScript!"
 
 // const message = prompt("Яка офіційна назва JavaScript?");
-// if(message === "ECMAScript") {
-//     alert("Вірно!");
+// if (message === "ECMAScript") {
+//   alert("Вірно!");
 // } else {
-//     alert("Не знаєте? ECMAScript!");
+//   alert("Не знаєте? ECMAScript!");
 // }
 // console.log(message);
 
@@ -51,15 +51,15 @@
 //     case "2":
 //         result = "Весна";
 //         break;
-    
+
 //         case "3":
 //         result = "Літо";
 //         break;
-    
+
 //         case "4":
 //         result = "Осінь";
 //         break;
-    
+
 //     default:
 //     result = "Введіть число від 1 до 4";
 // }
@@ -88,11 +88,29 @@
 
 // console.log(total);
 
-// !---------------------------------task05--------------------------------//
+// !---------------------------------HW--------------------------------//
 
-function makeArray(firstArray, secondArray, maxLength) {
-   // Change code below this line
-const newArray = firstArray.concat(secondArray);
-     newArray.slice(0, maxLength);
- 
-return newArray;
+//1.Напишіть цикл, який пропонує ввести
+//число більше 100 через prompt.
+//Якщо користувач ввів інше число - попросити
+//ввести ще раз и так далі.
+//Цикл повинен питати число, доки користувач не
+//введе число більше 100, чи не натисне кнопку
+//Cancel в prompt
+
+let num;
+
+while (num <= 100) {
+  num = prompt("Введіть число більше 100");
+}
+
+// 2. Є рядок, який складається із символів, наприклад, 'abcde'.
+// Перевірте, що першим символом цього рядка є літера 'a'.
+// Якщо це так - виведіть 'Так', в іншому випадку - 'Ні'.
+const str = "abcde";
+
+if (str[0] === "a") {
+  console.log("Так");
+} else {
+  console.log("Ні");
+}
