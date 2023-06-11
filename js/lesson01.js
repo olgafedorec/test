@@ -1,117 +1,197 @@
-// !---------------------------task01--------------------------- //
+//-------------------CONFIRM-----------------------//
+// const message = "Чи бажаєте продовжити підписку?";
+// const shouldRenew = confirm(message);
 
-//Використовуя функцію if...else,
-//напишіть код, який буде питати:
-//"Яка офіційна назва JavaScript?"
-//Якщо користувач вводить "ECMAScript",
-//то показати через alert: "Вірно!"
-//в противному випадку відобразити: "Не знаєте? ECMAScript!"
+// console.log(shouldRenew);
 
-// const message = prompt("Яка офіційна назва JavaScript?");
-// if (message === "ECMAScript") {
-//   alert("Вірно!");
-// } else {
-//   alert("Не знаєте? ECMAScript!");
-// }
-// console.log(message);
+//-------------------PROMPT------------------------//
+// let quantity = prompt("Введіть кількість товарів");
+// quantity = Number(quantity);
+// console.log(quantity);
+// console.log(typeof quantity);
 
-// !---------------------------task02----------------------------//
+//---------------------INT-------------------------//
+// let elementWidth = "50.55px";
+// elementWidth = Number.parseInt(elementWidth);
+// console.log("elementWidth: ", elementWidth);
 
-//Напишіть программу, яка отримує від користувача
-//число (кількість хвилин) и виводить у консоль
-//рядок у форматі годин та хвилин
-// https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
-// 70 === 01:10
+// let elementHeight = "200.74px";
+// elementHeight = Number.parseFloat(elementHeight);
+// console.log("elementHeight: ", elementHeight);
 
-// const time = prompt("Введіть число");
+// let salary = 1300.16472;
+// salary = Number(salary.toFixed(2));
 
-// const hours = Math.floor(Number(time) / 60);
-// const updateHours = String(hours).padStart(2, "0");
+// console.log(salary);
+// console.log(Number(salary.toFixed(2)));
 
-// const minutes = time % 60;
-// const updateMinutes = String(minutes).padStart(2, "0");
+// ---------------------NaN----------------------//
+// let quantity = "30";
+// let value = "Цю строку неможливо перетворити на число";
 
-// console.log(`${updateHours}:${updateMinutes}`);
+// console.log(Number(quantity));
+// console.log(Number(value));
 
-// !-----------------------------task03-----------------------------//
+// //--------------------Math----------------------//
+// console.log(Math);
 
-//Змінна num може набувати 4 значення: 1, 2, 3 або 4. Якщо вона має
-//значення "1", то у змінну result запишемо "зима", якщо має значення
-//"2" - "весна" і так далі. Розв'яжіть завдання через switch-case.
+// const base = 2;
+// const power = 5;
 
-// const num = prompt("Введіть число від 1 до 4");
+// const result = Math.pow(base, power);
+// console.log(2 ** 5);
 
-// let result = "";
+// Напиши скрипт, який просить користувача ввести число і ступень,
+// возводить число в цю ступінь і виводе результат в консоль//
 
-// switch (num) {
-//     case "1":
-//         result = "Зима";
-//         break;
+// // 1. Попросити ввести число і зберегти в змінну
+// let base = prompt("Введіть число");
+// base = Number(base);
+// console.log(base);
 
-//     case "2":
-//         result = "Весна";
-//         break;
+// // 2. Попросити ввести ступінь і зберегти її в змінну
+// let power = prompt("Введіть ступень");
+// console.log(power);
 
-//         case "3":
-//         result = "Літо";
-//         break;
-
-//         case "4":
-//         result = "Осінь";
-//         break;
-
-//     default:
-//     result = "Введіть число від 1 до 4";
-// }
-
+// // 3. Возвести введені дані в ступінь і вивести результат в консоль
+// const result = base ** power;
 // console.log(result);
 
-// !-------------------------------task04-------------------------------//
+//----------------------------Math.random-----------------------//
+// const max = 80;
+// const min = 10;
 
-//Напишіть цикл, який виводить в консоль
-//числа від max до min по зменшеню.
-//Виведіть в консоль суму усіх парних чисел.
+// const result = Math.round(Math.random() * (max - min) + min);
+// console.log(result);
 
+//----------------------------RandomColors-----------------------//
+// const colors = ["tomato", "teal", "orange", "deeppink", "skyblue"];
+// const max = colors.length - 1;
 // const min = 0;
-// const max = 10;
+// const index = Math.round(Math.random() * (max - min) + min);
+// const color = colors[index];
+// document.body.style.backgroundColor = color;
 
-// let total = 0;
+//-----------------------------Strings-----------------------------//
+// const message = "Ця строка має 25 символів";
+// console.log(message.length);
 
-// for (let i = max; i >= min; i -= 1) {
-//     console.log(i);
+//Напиши скрипт, який виведе рядок в форматі:
+//"Гость х у заселяється в z номер q", підставляючи замість
+// х у z q значення змінних//
 
-//     if (i % 2 === 0) {
-//     total += i;
+// const firstName = "Chelsy";
+// const lastName = "Emerald";
+// const fullName = firstName + " " + lastName;
 
-//     }
-// }
+// const room = 716;
+// const type = "VIP";
+// const welcomeMsg =
+//   "Гость" +
+//   " " +
+//   firstName +
+//   " " +
+//   "заселяється в" +
+//   " " +
+//   type +
+//   " " +
+//   "номер" +
+//   " " +
+//   room;
+//---------------------шаблонні рядки--------------------------//
+// const welcomeMsg = `Гость ${firstName} ${lastName} заселяється в ${type} номер ${room}`;
+// console.log(welcomeMsg);
 
-// console.log(total);
+//---------------------приведення до регистру------------------//
+// const quantity = 15;
+// const orderMsg = `Ви замовляєте ${quantity} холодильників.`;
+// let brand = prompt("Введіть бренд");
+// let brand = "SamSUng";
+// // const normalizedBrand = brand.toLowerCase();
+// console.log(brand[4]);
+// console.log(brand.slice(1).toLowerCase());
+// brand = brand[0] + brand.slice(1).toLowerCase();
+// console.log(brand);
 
-// !---------------------------------HW--------------------------------//
+//------------------------Пошук в рядку-------------------------//
+// const blacklistWord1 = "спам";
+// const blacklistWord2 = "розпродаж";
+// const string1 = "Привіт, я принц Абдул, це не спам, пропоную тобі мільон";
+// const string2 = "Найбільший РОЗПРОДАЖ тижня, не зволікай!";
+// const string3 = "Рекламна компанія #fatlivesmatter";
 
-//1.Напишіть цикл, який пропонує ввести
-//число більше 100 через prompt.
-//Якщо користувач ввів інше число - попросити
-//ввести ще раз и так далі.
-//Цикл повинен питати число, доки користувач не
-//введе число більше 100, чи не натисне кнопку
-//Cancel в prompt
+// console.log(string1.includes(blacklistWord1));
+// console.log(string1.includes(blacklistWord2));
 
-// let num = prompt("Введіть число більше 100");
+// const normalizedString2 = string2.toLowerCase();
+// console.log(normalizedString2.includes(blacklistWord1));
+// console.log(normalizedString2.includes(blacklistWord2));
 
-// while (num <= 100) {
-//   num = prompt("Введіть число більше 100");
-// }
-// console.log(num);
+//------------------------Логічні оператори-----------------//
+// console.log(5 && 7 && 0 && "mango");
+// console.log(5 || 0 || 8 || 2);
+// console.log(!5);
 
-// 2. Є рядок, який складається із символів, наприклад, 'abcde'.
-// Перевірте, що першим символом цього рядка є літера 'a'.
-// Якщо це так - виведіть 'Так', в іншому випадку - 'Ні'.
-// const str = "Abcde";
+//напиши скрипт, який перевіряє вміщення числа//
+// const x1 = 10;
+// const x2 = 30;
+// const number = 35;
+// console.log(`число ${number} потрапляє у відрізок від ${x1}?`, number < x1);
+// console.log(`число ${number} потрапляє у відрізок після ${x2}?`, number > x2);
 
-// if (str[0].toLowerCase() === "a") {
-//   console.log("Так");
+// // const res1 = number > x1 && number < x2;
+// // console.log(`число ${number} потрапляє у відрізок від ${x1} до ${x2}?`, res1);
+
+// const res2 = number < x1 || number > x2;
+// console.log(
+//   `число ${number} потрапляє у відрізок від ${x1} або після ${x2}?`,
+//   res2
+// );
+
+//напиши скрипт який перевіряє можливість відкрити чат із користувачем.
+//для цього користувач має бути:
+//другом
+//онлайн
+//без режиму "не турбувати"
+
+// const isFriend = true;
+// const isOnline = true;
+// const isDnd = false;
+// const canOpenChat = isOnline && isFriend && !isDnd;
+// console.log("Чи можливо відкрити чат?", canOpenChat);
+
+//---------------------розгалуження------------------------//
+// const balance = 1000;
+// let message;
+// if (balance > 0) {
+//   message = "Позитивний баланс";
 // } else {
-//   console.log("Ні");
+//   message = "Негативний баланс";
 // }
+
+// console.log(message);
+//------------------------
+
+// const salary = 2000;
+// if (salary < 500) {
+//   console.log("level 1");
+// } else if (salary > 500 && salary <= 1500) {
+//   console.log("level 2");
+// } else if (salary > 1500 && salary < 3000) {
+//   console.log("level 3");
+// } else {
+//   console.log("level 4");
+// }
+
+//-----------------тернарний оператор------------------//
+// const balance = 1000;
+// let message;
+
+// if(balance >=0) {
+//   message = "Позитивний баланс";
+// } else {
+//   message = "Негативний баланс";
+// }
+
+// const message = balance >= 0 ? "Позитивний баланс" : "Негативний баланс";
+// console.log(message);
