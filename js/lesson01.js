@@ -195,3 +195,122 @@
 
 // const message = balance >= 0 ? "Позитивний баланс" : "Негативний баланс";
 // console.log(message);
+
+// const stars = 2;
+// let price;
+// if (stars === 1 || stars === 2) {
+//   price = 20;
+// } else if (stars === 3 || stars === 4) {
+//   price = 30;
+// } else if (stars === 5) {
+//   price = 120;
+// } else {
+//   console.log("Такої кількості зірок немає");
+// }
+
+// console.log(price);
+
+// switch (stars) {
+//   case 1:
+//   case 2:
+//     price = 20;
+//     break;
+
+//   case 3:
+//   case 4:
+//     price = 30;
+//     break;
+
+//   case 5:
+//     price = 120;
+//     break;
+
+//   default:
+//     console.log("Такої кількості зірок немає");
+// }
+// console.log(price);
+
+//-----------------цикл For-----------------------//
+// for (let i = 100; i >= 10; i -= 10) {
+//   console.log(i);
+// }
+
+// console.log("qweqwe");
+
+// const minSalary = 500;
+// const maxSalary = 5000;
+// const employees = 5;
+// let totalSalary = 0;
+
+// for (let i = 1; i <= employees; i += 1) {
+//   const salary = Math.round(
+//     Math.random() * (maxSalary - minSalary) + minSalary
+//   );
+//   console.log(`ЗП робітника номер ${i} - ${salary}`);
+//   totalSalary += salary;
+// }
+// console.log("totalSalary:", totalSalary);
+//--------------------------------------------------
+
+// const min = 0;
+// const max = 5;
+// let total = 0;
+
+// for (let i = min; i <= max; i += 1) {
+//   console.log(i);
+//   if (i % 2 !== 0) {
+//     console.log("Непарне:", i);
+//     continue;
+//   }
+//   console.log("Парне:", i);
+//   total += i;
+// }
+
+// console.log("total:", total);
+
+//---------------------------------------------------------
+
+// let balance = 10000;
+// const payment = 2000;
+
+// console.log(
+//   `Загальна вартість замовлення ${payment} кредитів. Перевіряємо кількість доступних коштів на рахунку`
+// );
+
+// if (balance >= payment) {
+//   console.log("ok");
+//   balance -= payment;
+//   console.log("Все добре, знімаємо гроші... Дякуємо за покупку!");
+//   console.log(`На рахунку залишилося ${balance} кредитів`);
+// }
+
+// console.log("Операція завершена");
+
+//-------------------------------------------------------------------------
+
+// let totalSpent = 500;
+// let payment = 500;
+// let discount = 0;
+
+// if (totalSpent >= 100 && totalSpent < 1000) {
+//   console.log("Бронзoвий партнер, знижка 2%");
+//   discount = 0.02;
+// } else if (totalSpent >= 1000 && totalSpent < 5000) {
+//   console.log("Срібний партнер, знижка 5%");
+//   discount = 0.05;
+// } else if (totalSpent > 5000) {
+//   console.log("Золотий партнер, знижка 10%");
+//   discount = 0.1;
+// } else {
+//   console.log("Не партнер, знижка 0%");
+// }
+
+// payment = paymennt - payment * discount;
+
+// console.log(
+//   `Створюємо замовлення на суму ${payment} зі знижкою ${discount * 100}%`
+// );
+
+// totalSpent += payment;
+
+// console.log(`Загальна сума витрачених коштів в магазині: ${TotalSpent}`);
